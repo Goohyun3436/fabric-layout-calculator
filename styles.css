@@ -1,0 +1,257 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* 사각형 입력 폼들 */
+.input-container {
+  display: flex;
+  justify-content: center;
+  width: 750px;
+}
+#place-container,
+#be-placed-rect-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 50%;
+  margin: 20px;
+}
+.input-row {
+  margin-bottom: 10px;
+}
+.input-row span {
+  display: inline-block;
+  width: 100px;
+}
+
+/* 배치 결과 */
+.layout-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.container-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-wrap p {
+  height: 30px;
+  margin: 10px 0 0 0;
+}
+.container-wrap + .container-wrap {
+  margin-left: 2px;
+}
+#container,
+#remaining-container {
+  position: relative;
+  border: 2px solid rgb(135, 135, 135);
+  box-sizing: border-box;
+  width: 370px; /* 10분의 1 크기 + border 4px */
+  height: 370px; /* 10분의 1 크기 + border 4px  */
+}
+.rect,
+.remaining-rect {
+  position: absolute;
+  box-sizing: border-box;
+}
+.rect {
+  border: 1px solid #000;
+  background-color: rgba(100, 150, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em; /* 크기를 좀 더 보기 좋게 조정 */
+  color: rgb(0, 14, 53);
+}
+.rect:hover {
+  background-color: rgba(100, 200, 100, 0.8);
+  color: white;
+}
+.remaining-rect {
+  border: 1px solid red;
+  background-color: rgba(255, 200, 200, 0.5);
+}
+button {
+  margin-top: 10px;
+}
+
+/* 프로그레스바 */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto 20px auto;
+}
+.progress-wrap {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  height: 30px;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+#progress-bar-gray,
+#progress-bar-green {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+}
+#progress-bar-gray {
+  background-color: #c6c6c6;
+}
+#progress-bar-green {
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+#progress-text,
+#progress-total-cases {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-25%, -25%);
+  font-size: 12px;
+}
+#progress-total-cases {
+  right: 50%;
+  transform: translate(50%, -25%);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* 사각형 입력 폼들 */
+.input-container {
+  display: flex;
+}
+#place-container,
+#be-placed-rect-container {
+  margin: 20px;
+}
+.input-row {
+  margin-bottom: 10px;
+}
+
+/* 배치 결과 */
+.layout-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.container-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-wrap p {
+  height: 30px;
+  margin: 10px 0 0 0;
+}
+.container-wrap + .container-wrap {
+  margin-left: 2px;
+}
+#container,
+#remaining-container {
+  position: relative;
+  border: 2px solid rgb(135, 135, 135);
+  box-sizing: border-box;
+  width: 368px; /* 10분의 1 크기 + border 4px */
+  height: 368px; /* 10분의 1 크기 + border 4px  */
+}
+.rect,
+.large-rect,
+.remaining-rect {
+  position: absolute;
+  box-sizing: border-box;
+}
+.rect,
+.large-rect {
+  border: 0.5px solid rgb(145, 145, 145);
+  font-size: 15px; /* 크기를 좀 더 보기 좋게 조정 */
+  color: rgb(0, 14, 53);
+}
+.rect {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  background-color: rgba(216, 97, 0, 0.2);
+}
+.rect:hover {
+  background-color: rgba(100, 200, 100, 0.8);
+  color: white;
+}
+.large-rect {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  border-color: rgba(255, 115, 0);
+  background-color: rgba(255, 115, 0, 0.2);
+  font-weight: bold;
+  pointer-events: none;
+}
+.remaining-rect {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  border: 1px solid red;
+  background-color: rgba(255, 200, 200, 0.5);
+}
+.btn-wrap {
+  display: flex;
+}
+button {
+  margin-right: 10px;
+}
+
+/* 프로그레스바 */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto 20px auto;
+}
+.progress-wrap {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  height: 15px;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+#progress-bar-gray,
+#progress-bar-green {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+}
+#progress-bar-gray {
+  background-color: #c6c6c6;
+}
+#progress-bar-green {
+  background-color: #4caf50;
+  /* transition: width 0.4s ease; */
+}
+#progress-text,
+#progress-total-cases {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-25%, -75%);
+  font-size: 12px;
+}
+#progress-total-cases {
+  right: 50%;
+  transform: translate(50%, -75%);
+}
